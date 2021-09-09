@@ -1,0 +1,257 @@
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 850px) {
+    body {
+        font-size: 80%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header img {
+        width: 20%;
+        height: 20%;
+    }
+
+    footer{
+        overflow: hidden;
+    }
+
+    /*TIMETABLE*/
+
+    main {
+        height: auto;
+        flex-grow: 1;
+        box-shadow: none;
+    }
+
+    .center-wrapper form div img {
+        display:none;
+    }
+
+    .center-wrapper form div label {
+        display: none;
+    }
+
+    .timetablerow{
+        width: 100%;
+        height: auto;
+        display: block;
+        border: none;
+    }
+
+    .timetablerow div {
+        width: 100%;
+        height: 50px;
+        transition: none;
+    }
+
+    .timetablerow div:hover{
+        opacity: 0.9;
+        filter: none;
+        transform: none;
+        cursor: pointer;
+    }
+
+    .dayLabel{
+        width: 100%;
+        height: 50px;
+    }
+
+    div.numbers {
+        display: none;
+    }
+
+    /*ADDEVENT*/
+
+
+
+    .addEventButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(0, 0, 0, 1);
+        font-size: 90%;
+        transition: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .addEventButton:hover{
+        /*background-color: #979797;*/
+        transform: none;
+    }
+
+    .modal-content {
+        padding: 3%;
+        width: 100%;
+        height: 100%;
+    }
+
+    #create-event-form #drop-area{
+        display: none;
+    }
+
+    .modal-content .modal-button img{
+        width: 5vh;
+        height: 5vh;
+        transition: opacity 0.5s;
+    }
+
+    .event-detail-content .back-button img{
+        width: 4vw;
+        height: 4vw;
+        transition: opacity 0.5s;
+    }
+
+    .event-detail-content h1{
+        padding-top: 10%;
+    }
+
+    /*SVG*/
+    main > svg {
+        /*background-color: aqua;*/
+        display: none;
+    }
+
+    svg > line {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 850px) {
+    body {
+        font-size: 80%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header img {
+        width: 20%;
+        height: 20%;
+    }
+
+    footer{
+        overflow: hidden;
+    }
+
+    /*TIMETABLE*/
+
+    main {
+        height: auto;
+        flex-grow: 1;
+        box-shadow: none;
+    }
+
+    .center-wrapper form div img {
+        display:none;
+    }
+
+    .center-wrapper form div label {
+        display: none;
+    }
+
+    .timetablerow{
+        width: 100%;
+        height: auto;
+        display: block;
+        border: none;
+    }
+
+    .timetablerow div {
+        width: 100%;
+        height: 50px;
+        transition: none;
+    }
+
+    .timetablerow div:hover{
+        opacity: 0.9;
+        filter: none;
+        transform: none;
+        cursor: pointer;
+    }
+
+    .dayLabel{
+        width: 100%;
+        height: 50px;
+    }
+
+    div.numbers {
+        display: none;
+    }
+
+    /*ADDEVENT*/
+
+
+
+    .addEventButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(0, 0, 0, 1);
+        font-size: 90%;
+        transition: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .addEventButton:hover{
+        /*background-color: #979797;*/
+        transform: none;
+    }
+
+    .modal-content {
+        padding: 3%;
+        width: 100%;
+        height: 100%;
+    }
+
+    #create-event-form #drop-area{
+        display: none;
+    }
+
+    .modal-content .modal-button img{
+        width: 5vh;
+        height: 5vh;
+        transition: opacity 0.5s;
+    }
+
+    .event-detail-content .back-button img{
+        width: 4vw;
+        height: 4vw;
+        transition: opacity 0.5s;
+    }
+
+    .event-detail-content h1{
+        padding-top: 10%;
+    }
+
+    /*SVG*/
+    main > svg {
+        /*background-color: aqua;*/
+        display: none;
+    }
+
+    svg > line {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-device-width: 600px){
+    header{
+        flex-direction: column;
+    }
+}

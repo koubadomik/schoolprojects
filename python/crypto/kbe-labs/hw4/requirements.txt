@@ -1,0 +1,17 @@
+base58==2.0.1
+bitcoin==1.1.42
+bitmerchant==0.1.8
+cachetools==4.2.0
+certifi==2020.12.5
+chardet==3.0.4
+commontools==0.1.0
+ecdsa==0.16.1
+idna==2.10
+keychain==0.14.2.0
+keylib==0.1.1
+pycoin==0.90.20201031
+python-bitcoinrpc==0.1
+requests==2.25.0
+six==1.15.0
+urllib3==1.26.2
+utilitybelt==0.2.6

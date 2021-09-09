@@ -1,0 +1,26 @@
+{
+  "rooms": [
+    {
+      "_id": "GENERAL",
+      "t": "c",
+      "name": "general",
+      "usernames": [],
+      "msgs": 1,
+      "usersCount": 1,
+      "default": true
+    },
+    {
+      "_id": "TOPIC",
+      "t": "c",
+      "name": "topic",
+      "usernames": [],
+      "msgs": 0,
+      "usersCount": 0,
+      "default": false
+    }
+  ],
+  "count": 2,
+  "offset": 0,
+  "total": 2,
+  "success": true
+}

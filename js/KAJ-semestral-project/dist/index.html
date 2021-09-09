@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" manifest="off.appcache">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table of your time</title>
+        <link rel="stylesheet" href="./resource/css/main.css">
+        <link rel="stylesheet" href="./resource/css/mobile.css">
+        <link rel="shortcut icon" href="./resource/media/icon.svg"/>
+    </head>
+    <body>
+    <div class="page-wrapper">
+        <header>
+            <div></div>
+            <div class="logo">
+                <img src="./resource/media/logo.svg" alt="logo">
+                <h1>Table of your time</h1>
+            </div>
+            <div class="modal-button addEventButton">
+                <div>New Event</div>
+                <img  src="./resource/media/add_event.svg" alt="">
+            </div>
+        </header>
+        <div class="center-wrapper">
+            <form action="#">
+                <div>
+                    <img id="start-down" src="./resource/media/left.svg" alt="">
+                    <label for="start-timetable">
+                        Start
+                    </label>
+                    <img id="start-up" src="./resource/media/right.svg" alt="">
+                    <input type="number" name="start-timetable" id="start-timetable" placeholder="start" min="0" max="22" value="7">
+                </div>
+               <div>
+                   <img id="end-down" src="./resource/media/left.svg" alt="">
+                   <label for="end-timetable">
+                       End
+                   </label>
+                   <img id="end-up" src="./resource/media/right.svg" alt="">
+                   <input type="number" name="end-timetable" id="end-timetable" placeholder="end" min="1" max="24" value="20">
+               </div>
+            </form>
+        </div>
+
+
+        <main class="timetable">
+            <div class="event-detail">
+                <div class="event-detail-content">
+                    <div class="back-button" title="Back">
+                        <img src="./resource/media/right.svg" alt="">
+                    </div>
+                    <section>
+
+                    </section>
+                </div>
+            </div>
+            <svg>
+            </svg>
+            <div class="dayLabel">
+                <span>Mo</span>
+            </div>
+            <div class="timetablerow">
+            </div>
+            <div class="dayLabel grey">
+                <span>Tu</span>
+            </div>
+            <div class="timetablerow grey"></div>
+            <div class="dayLabel">
+                <span>We</span>
+            </div>
+            <div class="timetablerow"></div>
+            <div class="dayLabel grey">
+                <span>Th</span>
+            </div>
+            <div class="timetablerow grey"></div>
+            <div class="dayLabel">
+                <span>Fr</span>
+            </div>
+            <div class="timetablerow"></div>
+            <div class="dayLabel grey">
+                <span>Sa</span>
+            </div>
+            <div class="timetablerow grey"></div>
+            <div class="dayLabel">
+                <span>Su</span>
+            </div>
+            <div class="timetablerow"></div>
+            <div class="numbers">
+            </div>
+        </main>
+        <!--<input type="button" value="" class="addEventButton modal-button">-->
+        <footer>
+            <p>Copyright 2018 by CTU FEE Prague. All Rights Reserved.</p>
+        </footer>
+        <!-- TODO:FREEPIK-->
+    </div>
+
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-button" title="Back">
+                <img src="./resource/media/right.svg" alt="">
+            </div>
+            <form action="#" id="create-event-form">
+                <div>
+                    <label for="name-field">Name:</label>
+                    <input id="name-field" type="text" required placeholder="Some new experience..." minlength="4">
+                </div>
+
+                <div>
+                    <label for="note-field">Description:</label>
+                    <textarea id="note-field" required placeholder="Description" minlength="6"></textarea>
+                </div>
+
+                <div>
+                    <label for="day-select">Day:</label>
+                    <select id="day-select" name="day" required>
+                        <option value="" disabled selected>Select a day</option>
+                        <option value="0">Monday</option>
+                        <option value="1">Tuesday</option>
+                        <option value="2">Wednesday</option>
+                        <option value="3">Thursday</option>
+                        <option value="4">Friday</option>
+                        <option value="5">Saturday</option>
+                        <option value="6">Sunday</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="start-hour-field">Start hour:</label>
+                    <input id="start-hour-field" value="8" type="number" min="0" max="23" required>
+                </div>
+
+                <div>
+                    <label for="duration-field">Duration in hours:</label>
+                    <input type="number" min="1" max="23" value="1" id="duration-field" required>
+                </div>
+
+                <div>
+                    <label for="place-field">Place:</label>
+                    <input id="place-field" type="text" required placeholder="At home...">
+                </div>
+                <button id="location-button">Use your current location</button>
+                <section id="drop-area">
+                    Just drag 'n drop some file
+                </section>
+                <input type="submit" id="create-event-button" value="Create event">
+            </form>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+    </body>
+</html>

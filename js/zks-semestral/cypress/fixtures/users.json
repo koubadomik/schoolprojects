@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "_id": "rocket.cat",
+      "name": "Rocket.Catl",
+      "username": "rocket.cat",
+      "status": "online",
+      "active": true,
+      "roles": [
+        "bot"
+      ],
+      "avatarETag": null
+    },
+    {
+      "_id": "Cypřiš",
+      "name": "cypřiš",
+      "username": "cypřiš",
+      "status": "DOWN",
+      "active": false,
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "_id": "testov.testov",
+      "name": "Test",
+      "username": "TesT",
+      "status": "online",
+      "active": true,
+      "roles": [
+        "bot"
+      ],
+      "avatarETag": null
+    },
+    {
+      "_id": "khFupsnFxSkEwHN5s",
+      "emails": [
+        {
+          "address": "test@test.test",
+          "verified": false
+        }
+      ],
+      "status": "online",
+      "active": true,
+      "roles": [
+        "admin"
+      ],
+      "name": "test",
+      "username": "test"
+    }
+  ],
+  "count": 3,
+  "offset": 0,
+  "total": 3,
+  "success": true
+}

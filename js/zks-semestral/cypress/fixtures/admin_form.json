@@ -1,0 +1,6 @@
+{
+  "data": [
+    {"username": "a", "name": "", "email": "valid@email.com", "password": "a"},
+    {"username": "", "name": "j", "email": "valid@email.com", "password": "a"}
+  ]
+}

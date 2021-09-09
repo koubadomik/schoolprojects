@@ -1,0 +1,480 @@
+body{
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 1.5s;
+    cursor: default;
+    background-color: #fff;
+    background-image:
+            linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+            linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    overflow: hidden;
+}
+
+.fade-in{
+    opacity: 1;
+}
+
+
+footer, header {
+    text-align: center;
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+header img {
+    margin-right: 2%;
+    width: 8%;
+    height: 8%;
+}
+
+footer {
+    margin-top: 6%;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 50%;
+}
+
+/*TIMETABLE*/
+main {
+    margin: auto;
+    background: white;
+    height: 25vmax;
+    width: 80vmax;
+    position: relative;
+    box-shadow: 0 0 15px 1px gray;
+    border-radius: 2px;
+}
+
+#start-timetable, #end-timetable{
+    display: none;
+}
+
+.center-wrapper{
+    margin:auto;
+    width: 80vmax;
+}
+
+.center-wrapper form {
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+}
+
+.center-wrapper form div {
+    display: flex;
+}
+
+.center-wrapper form div img {
+    margin: 7% 7% 10%;
+    width: 2.5vw;
+    height: 2.5vw;
+    transition: opacity 0.5s;
+}
+
+.center-wrapper form div img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.center-wrapper form div label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: darkgrey;*/
+    /*padding: 10%;*/
+}
+
+
+/*NUMBERS*/
+div.numbers {
+    font-size: 110%;
+    display: block;
+    width: 80vmax;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.numbers div {
+    display: inline-block;
+    padding-top: 2.5%;
+    /*width: 12.2%*/
+}
+
+.numbers span {
+    /*position: absolute;*/
+    display: inline-block;
+    text-align: left;
+}
+
+/*DAYLABELS*/
+.dayLabel {
+    /*text-align: center;*/
+    float:left;
+    display: block;
+    width: 15%;
+    height: 13.7%;
+    background-color:#E6E6E6;
+    position: relative;
+    border-bottom: 2px solid white;
+}
+
+.dayLabel span {
+    text-align: center;
+    position: absolute;
+    font-size: 150%;
+    font-weight: 400;
+    display: block;
+    top: 20%;
+    width: 100%;
+    margin: auto;
+}
+
+/*TIMETABLEROW*/
+.timetablerow {
+    display: grid;
+    float: right;
+    width: 85%;
+    height: 13.7%;
+    grid-template-rows: 1fr;
+    border-bottom: 2px solid white;
+    background-color:#E6E6E6;
+    overflow: visible;
+}
+
+.timetablerow div{
+    /*height: 100%;*/
+    grid-row: 1 / 4;
+    margin: 0;
+    opacity: 0.9;
+    position: relative;
+    transition: opacity .5s, filter .5s, transform .5s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 1px gray;
+    border-radius: 2px;
+}
+
+.timetablerow div span {
+    display: block;
+    text-align: center;
+    font-size: 120%;
+    width: 80%;
+    overflow: hidden;
+}
+
+.timetablerow div:hover {
+    z-index: 2;
+    opacity: 1;
+    filter: brightness(150%);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/*EVENT DETAIL*/
+.event-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 2% 15% 15%;
+    box-sizing: border-box;
+    z-index: 99;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+main.modal-visible .event-detail {
+    visibility: visible;
+}
+
+.event-detail-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 3%;
+    transform: scale(0);
+    overflow: hidden;
+
+    transition: transform 1s ease;
+    border-radius: 5px;
+    /*background: white;*/
+    background-color: #fff;
+    background-image:
+            linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+
+main.modal-visible .event-detail-content {
+    transform: scale(1);
+}
+
+
+.event-detail-content .back-button img{
+    width: 2vw;
+    height: 2vw;
+    transition: opacity 0.5s;
+}
+
+.event-detail-content .back-button img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+main.modal-visible .back-button{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+.event-detail-content h1{
+    text-align: center;
+    font-size: 300%;
+    margin: 0;
+    padding: 0 0 10%;
+}
+
+.event-detail-content h2 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.event-detail-content h2 span{
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: gray;
+    box-sizing: border-box;
+    padding: 3px 0 3px 3px;
+    margin-right: 4px;
+}
+
+.event-detail-content img{
+    width: 2vw;
+    height: 100%;
+}
+
+.event-detail-content a {
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.5s;
+}
+
+.event-detail-content a:hover {
+    opacity: 0.5;
+}
+
+.event-detail-content p {
+    padding-top: 0;
+    margin-top: 0;
+    padding-left: 2%;
+}
+
+
+/*ADDEVENT*/
+header div.addEventButton{
+    /*flex-basis: 7%;*/
+    margin-right: 3%;
+}
+
+.addEventButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0, 0, 0, 0);
+    font-size: 90%;
+    transition: transform 1s, background-color 1s, width 1s, background-color 1s, font-weight 1s, color 1s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.addEventButton img {
+    width: 4vw;
+    height: 4vw;
+}
+
+.addEventButton div {
+    /*padding-right: 7%;*/
+    /*width: 30%;*/
+}
+
+
+
+.addEventButton:hover{
+    /*background-color: #979797;*/
+    transform: scale(1.3);
+    color: rgba(0, 0, 0, 1);
+}
+
+
+
+/*ADD EVENT MODAL*/
+
+
+body.modal-visible {
+    overflow: hidden;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 2% 15% 15%;
+    box-sizing: border-box;
+    z-index: 99;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+body.modal-visible .modal {
+    visibility: visible;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    padding: 3%;
+    width: 40%;
+    height: 100%;
+    /*max-width: 100%;*/
+    /*min-height: 100%;*/
+    transform: scale(0);
+
+    transition: transform 1.5s ease;
+    border-radius: 5px;
+    background: white;
+
+    background-color: #fff;
+    background-image:
+            linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+#create-event-form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#create-event-form div{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body.modal-visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-content .modal-button{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+.modal-content .modal-button img{
+    width: 2vw;
+    height: 2vw;
+    transition: opacity 0.5s;
+}
+
+.modal-content .modal-button img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/*DRAG 'N DROP*/
+#create-event-form #drop-area{
+    width: 90%;
+    height: 25%;
+    background-color: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: gray;
+    transition: color 0.75s, border-radius 0.75s, border 0.75s;
+}
+
+#create-event-form #drop-area:hover{
+    color: black;
+}
+
+#create-event-form #drop-area.wrong-dod {
+    border: red 2px solid;
+    color: red;
+}
+
+.dragover {
+    border: green dashed 3px;
+}
+
+
+
+/*SVG*/
+main > svg {
+    /*background-color: aqua;*/
+    position: absolute;
+    left: auto;
+    right: 0;
+    height: 100%;
+    width: 85%;
+}
+
+svg > line {
+    stroke: #D8D8D8;
+    stroke-width: 1.45;
+}
+
+
+
+/*HELPERS*/
+.grey {
+    background-color:#EFEFEF;
+}
+
+.error-on-button {
+    color: red;
+}
+
+.ok-on-button {
+    color: green;
+}
+
+
